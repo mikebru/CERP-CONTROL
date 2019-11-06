@@ -48,7 +48,7 @@ void loop() {
 //called when Hall sensor detects change 
 void BuoyOneCheck() {
   buoyOneState = !buoyOneState;
-  Serial.println("buoy/1/" + buoyOneState);  
+  Serial.println("buoy/1/" + String(buoyOneState));  
 }
 
 void BuoyTwoCheck() {
@@ -65,7 +65,3 @@ void BuoyFourCheck() {
   buoyFourState = !buoyFourState;
   Serial.println("buoy/4/" + buoyFourState);  
 }
-
-
-
-
