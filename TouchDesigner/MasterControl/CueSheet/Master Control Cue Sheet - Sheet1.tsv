@@ -1,0 +1,7 @@
+Cue Number	Cue Time	Cue Name	Light Message	Audio Message	Media XR Message	Media QLab Message
+1		Reset			state1/1	/panic
+2	0	Escape Begin				/cue/1/start
+3	0.03333333333	Power Restored			state2/1	
+4	0.1666666667	Enter XR			state3/1	
+5	0.3333333333	Twilight Storm				/cue/2/start
+6	0.6666666667	Stormy Storm				/cue/3/start
