@@ -1,67 +1,94 @@
 const byte ledPin = 13; //led
-
-const byte buoyOnePin = 3; //hall sensor
-const byte buoyTwoPin = 4; //hall sensor
-const byte buoyThreePin = 5; //hall sensor
-const byte buoyFourPin = 6; //hall sensor
-
+//const byte interruptPin = 3; //hall sensor
+const int pin1 = 2;
+const int pin2 = 3;
+const int pin3 = 4;
+const int pin4 = 5;
 
 const int signalPin = 7;
 
-volatile byte buoyOneState = LOW;
-volatile byte buoyTwoState = LOW;
-volatile byte buoyThreeState = LOW;
-volatile byte buoyFourState = LOW;
+volatile byte state = LOW;
+
+boolean onePin, twoPin, threePin, fourPin = false;
+boolean oneCheck, twoCheck, threeCheck, fourCheck = false;
+
 
 void setup() {
-  
   pinMode(ledPin, OUTPUT);
+  //pinMode(interruptPin, INPUT_PULLUP);
+  pinMode(pin1, INPUT);
+  pinMode(pin2, INPUT);
+  pinMode(pin3, INPUT);
+  pinMode(pin4, INPUT);
+
   pinMode(signalPin, OUTPUT);
-
-  pinMode(buoyOnePin, INPUT_PULLUP);
-  pinMode(buoyTwoPin, INPUT_PULLUP);
-  pinMode(buoyThreePin, INPUT_PULLUP);
-  pinMode(buoyFourPin, INPUT_PULLUP);
-  
-  attachInterrupt(digitalPinToInterrupt(buoyOnePin), BuoyOneCheck, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(buoyTwoPin), BuoyTwoCheck, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(buoyThreePin), BuoyThreeCheck, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(buoyFourPin), BuoyFourCheck, CHANGE);
-
-  
+  //attachInterrupt(digitalPinToInterrupt(interruptPin), test, CHANGE);
   Serial.begin(9600);
-
+  Serial.println("active");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(ledPin, buoyOneState);
-  //Serial.println(state);
+  /*
+  digitalWrite(ledPin, state);
+  Serial.println(state);
 
-  if (buoyOneState == HIGH) {
-    digitalWrite(signalPin, buoyOneState);
-    //Serial.println("Sent!");
+  if (state == HIGH) {
+    digitalWrite(signalPin, state);
+    Serial.println("Sent!");
   }
+  */
+
+  
+ //Serial.println(digitalRead(pin1));
+
+  onePin = !digitalRead(pin1);
+  twoPin = !digitalRead(pin2);
+  threePin = !digitalRead(pin3);
+  fourPin = !digitalRead(pin4);
+
+  if (onePin && !oneCheck)
+  {
+    Serial.println("buoy1/1");
+    oneCheck = true;  
+  }else if(!onePin && oneCheck)
+  {
+    Serial.println("buoy1/0");
+    oneCheck = false;  
+  }
+  
+  if (twoPin && !twoCheck)
+  {
+    Serial.println("buoy2/1");
+    twoCheck = true;
+  }else if(!twoPin && twoCheck)
+  {
+    Serial.println("buoy2/0");
+    twoCheck = false;  
+  }
+  
+  if (threePin && !threeCheck)
+  {
+    Serial.println("buoy3/1");
+    threeCheck = true;
+  }else if(!threePin && threeCheck)
+  {
+    Serial.println("buoy3/0");
+    threeCheck = false;  
+  }
+  
+  
+  if(fourPin && !fourCheck)
+  {
+    Serial.println("buoy4/1");
+    fourCheck = true;
+  }else if(!fourPin && fourCheck)
+  {
+    Serial.println("buoy4/0");
+    fourCheck = false;  
+  }
+
 }
 
-
-//called when Hall sensor detects change 
-void BuoyOneCheck() {
-  buoyOneState = !buoyOneState;
-  Serial.println("buoy/1/" + String(buoyOneState));  
-}
-
-void BuoyTwoCheck() {
-  buoyTwoState = !buoyTwoState;
-  Serial.println("buoy/2/" + buoyTwoState);  
-}
-
-void BuoyThreeCheck() {
-  buoyThreeState = !buoyThreeState;
-  Serial.println("buoy/3/" + buoyThreeState);  
-}
-
-void BuoyFourCheck() {
-  buoyFourState = !buoyFourState;
-  Serial.println("buoy/4/" + buoyFourState);  
+void test() {
+  state = !state;
 }
