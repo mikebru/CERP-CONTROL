@@ -1,9 +1,11 @@
 Cue Number	Cue Time	Cue Name	Light Message	Audio Message	Media XR Message	Media QLab Message	Media Terminal Computer
-1		Reset		/panic	state0/1	/panic	state/0
+1	0	Reset	/hog/playback/go/ 1.1 	/panic	state0/1	/panic	state/0
 2	0	Escape Begin		/cue/1/start		/cue/1/start	
-3	0.03333333333	Power Restored			state1/1		state/1
-4	0.1666666667	Enter XR			state2/1		
-5	0.3333333333	Twilight Storm				/cue/2/start	
-6	0.6666666667	Stormy Storm				/cue/3/start	
-7		XR Door Close			state3/1		
-8		XR Door Seal			state4/1		
+3	0	Keypad Correct					
+4	0	Cargo Open	/hog/playback/go/ 1.2 				
+5	0	Power Restored	/hog/playback/go/ 1.5 		state1/1	/cue/2/start	state/1
+6	0	terminal Correct	/hog/playback/go/ 1.7 				
+7	0	Enter XR			state2/1		
+8	0	XR Door Open			state3/1		
+9	0	XR Door Seal			state4/1		
+10	0	Get out	/hog/playback/go/ 1.9 			/cue/3/start	
