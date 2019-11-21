@@ -1,14 +1,14 @@
 Cue Number	Cue Time	Cue Name	Light Message	Audio Message	Media XR Message	Media QLab Message	Media Terminal Computer
-1	0	Reset	/hog/playback/go/0/ 1.1 	/panic	state0/1	/panic	state/0
+1	0	Reset	/hog/playback/go/0/1.1 	/panic	state0/1	/panic	state/0
 2	0	Escape Begin		/cue/201/start		/cue/1/start	
 3	0	Keypad Correct		/cue/203/start			
-4	0	Cargo Open	/hog/playback/go/0/ 1.2 	/cue/204/start			
-5	0	Power Restored	/hog/playback/go/0/ 1.5 	/cue/206/start	state1/1	/cue/2/start	state/1
-6	0	terminal Correct	/hog/playback/go/0/ 1.7 				
+4	0	Cargo Open	/hog/playback/go/0/1.2 	/cue/204/start			
+5	0	Power Restored	/hog/playback/go/0/1.5 	/cue/206/start	state1/1	/cue/2/start	state/1
+6	0	terminal Correct	/hog/playback/go/0/1.7 				
 7	0	Enter XR		/cue/209/start	state2/1		
 8	0	XR Door Open			state3/1		
 9	0	XR Door Seal			state4/1		
 10		Leave Option		/cue/211/start			
 11		Map Calibrated		/cue/212/start			
 12		Data Sent		/cue/213/start			
-13	0	Get out	/hog/playback/go/0/ 1.9 	/cue/214/start		/cue/3/start	
+13	0	Get out	/hog/playback/go/0/1.9 	/cue/214/start		/cue/3/start	
