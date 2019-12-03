@@ -1,9 +1,15 @@
-Cue Name	Audio Message
-Hint P1 A	/cue/202/start
-Hint P3 A	/cue/205/start
-Hint P5 1	/cue/207/start
-Hint P5 2	/cue/208/start
-AI Goal Reminder	/cue/210/start
-Outcome 1	/cue/215/start
-Outcome 2	/cue/216/start
-Outcome 3	/cue/217/start
+Cue Name	Audio Message	Media QLab Message
+Hint 1.1	/cue/202/start	
+Hint 3.1	/cue/205/start	
+Hint 3.2	/cue/206/start	
+Hint 3.3	/cue/207/start	
+Hint 3.4	/cue/208/start	
+Hint 3.5	/cue/209/start	
+Hint 4.1	/cue/210/start	
+Hint 6.1	/cue/216/start	
+Hint 6.2	/cue/217/start	
+Hint 6.3	/cue/218/start	
+Outcome 1	/cue/223/start	/cue/4/start
+Outcome 2	/cue/224/start	/cue/5/start
+Outcome 3	/cue/225/start	/cue/6/start
+Sound Panic	/panic	
