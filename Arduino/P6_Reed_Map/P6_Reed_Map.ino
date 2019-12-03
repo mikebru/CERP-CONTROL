@@ -1,8 +1,8 @@
 
 const int pin1 = 7;
-const int pin2 = 6; // Pin connected to reed switch
+const int pin2 = 4; // Pin connected to reed switch
 const int pin3 = 5;
-const int pin4 = 4;
+const int pin4 = 6;
 
 const int LED_PIN = 13; // LED pin - active-high
 
