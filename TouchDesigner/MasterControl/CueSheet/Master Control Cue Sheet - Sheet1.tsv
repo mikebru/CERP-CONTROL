@@ -6,9 +6,6 @@ Cue Number	Cue Time	Cue Name	Light Message	Audio Message	Media XR Message	Media 
 5	0	Power Restored	/hog/playback/go/0/1.5 	/cue/211/start	state1/1	/cue/2/start	state/1
 6	0	terminal Correct	/hog/playback/go/0/1.7 	/cue/213/start			
 7	0	Enter XR		/cue/215/start	state2/1	/cue/3/start	
-8	0	XR Door Open			state3/1		
-9	0	XR Door Seal			state4/1		
-10		Leave Option		/cue/220/start			
 11		Map Calibrated		/cue/219/start			
-12		Data Sent		/cue/221/start	state5/1		
+12		Transmit Data		/cue/221/start	state5/1		
 13	0	Get out	/hog/playback/go/0/1.9 	/cue/222/start			
